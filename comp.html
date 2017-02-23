@@ -87,9 +87,13 @@
 
         font-family: batmanforeveralternate;
     }
+    
+    #comparativo {
+        font-size: 16pt;
+        color: green;
+    }
 </style>
-<script>
-</script>
+
 <html>
 <meta charset="utf-8">
     <head>
@@ -109,9 +113,90 @@
 		<li><a href="Comp.html">Comparar</a></li>
 	</ul>
 </nav>
-<img src="1080-COMPARISON.jpg" width="720" height="480">
+         <table id="comparativo">
+             <tr>
+                <th>Gpu</th>
+                 <th>Clock da GPU</th>
+                 <th>Glock de Memória</th>
+                 <th>Taxa de Transferência</th>
+                 <th>Pixels</th>
+                 <th>DirectX</th>
+                 <th>Shader</th>
+             </tr>
+            
+         </table>
+               
+             
 
 
 </center>
     </body>
 </html>
+
+<script>
+placas = [
+    {
+        gpu: "GTX 690",
+        clock_gpu: "915mMHz",
+        clock_mem: "6008MHz",
+        transf: "192 GB/s",
+        pixels: "1536 Pixels",
+        directx: "11",
+        shader: "5.0"
+    },
+    {
+        gpu: "GTX 680",
+        clock_gpu: "1006MHz",
+        clock_mem: "6008MHz",
+        transf: "192 GB/S",
+        pixels: "1536 Pixels",
+        directx: "11",
+        shader: "5.0"
+    },
+    {
+        gpu: "GTX 670",
+        clock_gpu: "915MHz",
+        clock_mem: "6008MHz",
+        transf: "192 GB/s",
+        pixels: "1536 Pixels",
+        directx: "11",
+        shader: "5.0"
+    },
+    {
+        gpu: "GTX 660",
+        clock_gpu: "860MHz",
+        clock_mem: "5890MHz",
+        transf: "192 GB/s",
+        pixels: "1439 Pixels",
+        directx: "11",
+        shader: "5.0"
+    },
+    {
+        gpu: "GTX 650",
+        clock_gpu: "965MHz",
+        clock_mem: "5960MHz",
+        transf: "192 GB/s",
+        pixels: "1439 Pixels",
+        directx: "11",
+        shader: "5.0"
+    }
+
+]
+
+tabela = document.getElementById("comparativo");
+conteudo = "";
+for(var i = 0; i < placas.length; i++)
+{
+    conteudo += "<tr>";
+    conteudo += "<td>" + placas[i].gpu + "</td>";
+    conteudo += "<td>" + placas[i].clock_gpu + "</td>";
+    conteudo += "<td>" + placas[i].clock_mem + "</td>";
+    conteudo += "<td>" + placas[i].transf + "</td>";
+    conteudo += "<td>" + placas[i].pixels + "</td>";
+    conteudo += "<td>" + placas[i].directx + "</td>";
+    conteudo += "<td>" + placas[i].shader + "</td>";
+    conteudo += "</tr>";
+}
+    
+tabela.innerHTML += conteudo;
+</script>

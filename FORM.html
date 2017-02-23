@@ -1,6 +1,13 @@
 <!DOCTYPE HTML>
 
 <style>
+    div {
+        color: #56FF00;
+    }
+        
+    label {
+        color: green;
+    }
 
     #menu {
         margin-left: auto;
@@ -39,6 +46,7 @@
         font-size: 15px;
     }
     input {
+        color: #56FF00;
         font-family: batmanforeveralternate;
         font-weight: 300;
         font-size: 18px;
@@ -88,14 +96,65 @@
         font-family: batmanforeveralternate;
     }
 </style>
+<script>
 
-<form action="/pagina-processa-dados-do-form" method="post">
-    <div>
-        <label for="nome"><font color="green">Login:</font></label>
-        <input type="text" id="nome" />
+function myFunction() {
+    window.location = "site.html";
+}
+</script>
+
+<head>
+<title>Teste de BS</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  
+  </head>
+  <body>
+      
+      
+      
+
+  
+  <form name="exemplo" method="post" action="mailto:Kishinzzz@outlook.com">
+   </div>
+    <div class="form-group">
+      <label for="usr">Usuário:</label>
+      <input type="text" class="form-control" id="usr" placeholder="Digite seu usuário">
+    </div>  
+     </div>
+    <div class="form-group">
+      <label for="pwd">Senha:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Digite sua Senha">
     </div>
-    <div>
-        <label for="email"><font color="green">Senha:</font></label>
-        <input type="email" id="email" />
+       </div>
+    <div class="form-group">
+      <label for="pwd">Senha:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Digite novamente sua Senha">
     </div>
-</form>
+       </div>
+    <div class="form-group">
+      <label for="pwd">CPF:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Digite seu CPF">
+    </div>
+       </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Digite seu Email">
+    </div>
+       </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Digite seu Email novamente">
+    </div>
+       </div>
+    <div class="form-group">
+      <label for="pwd">Data de Nascimento:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Digite sua data de nascimento">
+    </div>
+    <input type=submit>
+</form> 
+<button onclick="myFunction()">Sair</button>
+   
+
+</body>
